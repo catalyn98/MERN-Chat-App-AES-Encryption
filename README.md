@@ -44,9 +44,9 @@ $ npm run dev
 # Web application screenshots 
 | <p align="center">**Register screen**</p> | <p align="center">**Login Screen**</p> | <p align="center">**Start screen**</p> |
 | ------------ | ------------ | ------------ |
-| <img src="https://github.com/catalyn98/mern-chat-app-aes-encryption/blob/main/screenshoots/1.RegisterScreen.png" />  |  <img src="https://github.com/catalyn98/mern-chat-app-aes-encryption/blob/main/screenshoots/2.LoginScreen.png" /> | <img src="img src="https://github.com/catalyn98/mern-chat-app-aes-encryption/blob/main/screenshoots/3.StartScreen.png" /> |
+| <img src="https://github.com/catalyn98/mern-chat-app-aes-encryption/blob/main/screenshoots/1.RegisterScreen.png" />  |  <img src="https://github.com/catalyn98/mern-chat-app-aes-encryption/blob/main/screenshoots/2.LoginScreen.png" /> | <img src="https://github.com/catalyn98/mern-chat-app-aes-encryption/blob/main/screenshoots/3.StartScreen.png"" /> |
 | <p align="center">**Conversation screen**</p> |  |  |
-| <img src="img src="https://github.com/catalyn98/mern-chat-app-aes-encryption/blob/main/screenshoots/4.ConversationScreen.png" /> |  |  |
+| <"img src="https://github.com/catalyn98/mern-chat-app-aes-encryption/blob/main/screenshoots/4.ConversationScreen.png"" /> |  |  |
 
 # Advanced Encryption Standard (AES)
 The Advanced Encryption Standard (AES) is a specification for the encryption of electronic data established by the U.S. National Institute of Standards and Technology (NIST) in 2001. AES is a symmetric key encryption technique, which means the same key is used for both encrypting and decrypting the data. It was designed to be a replacement for the older Data Encryption Standard (DES) and has since become the standard for secure data encryption worldwide.
