@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: url("/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.AESLogo {
+  display: inline-block;
+}
+
+.customDivider {
+  margin-bottom: 0rem;
+}
+
+/* rewrite CSS rules */
+.bg-gray-400 {
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+.text-blue-500 {
+  color: rgb(22 213 251);
+}
+
+.border {
+  border-width: 1.5px;
+}
+
+.label-text,
+a,
+a:hover,
+h1 {
+  color: white;
+}
+
+.centerMyButton {
+  display: flex;
+  justify-content: center;
+}
+
+.textColor {
+  color: white;
+}
+
+.text-gray-200 {
+  color: rgb(255 255 255);
+}
+
+.bg-500 {
+  --tw-bg-opacity: 1;
+  background-color: oklch(0.253267 0.015896 252.417568 / 1);
+}
+
+.border-slate-500 {
+  border-color: white;
+}
+
+.customDimension {
+  height: 2.6rem;
+}
+
+.bg-slate-500 {
+  background-color: oklch(0.313815 0.021108 254.139175 / 1);
+}
+
+.w-full-custom {
+  width: 92%;
+}
+
+.textColorSearch {
+  color: oklch(0.65 0.02 269.06);
+}
+
+.pe-3 {
+  padding-inline-start: 0.75rem;
+  padding-inline-end: 0.25rem;
+}
+
+/* dark mode looking scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(42 50 60);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(14 165 233);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* SHAKE ANIMATION ON HORIZONTAL DIRECTION */
+.shake {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) 0.2s both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.maxWidth {
+  max-width: 500px;
+}
+
+@media screen and (max-width: 870px) {
+  .pe-3 {
+    padding-inline-end: 0rem;
+  }
+}
+
+/* Hide the message by default */
+.responsive-message {
+  display: none;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  text-align: center;
+  padding: 1rem;
+  background-color: rgb(0, 0, 0);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 0.5rem;
+}
+
+/* Show the message when the screen width is at most 640px */
+@media screen and (max-width: 640px) {
+  .container {
+    display: none;
+  }
+  .responsive-message {
+    display: block;
+  }
+}
