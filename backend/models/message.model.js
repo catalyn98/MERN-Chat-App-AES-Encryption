@@ -29,10 +29,10 @@ const messageSchema = new mongoose.Schema(
 
 // Funcție pentru generarea unei noi chei de criptare
 function generateEncryptionKey() {
-  const keyBuffer = crypto.randomBytes(32); // Generăm bufferul de 32 bytes
-  const hexKey = keyBuffer.toString("hex"); // Convertim la format hex
-  const keyLengthBits = keyBuffer.length * 8; // Calculăm lungimea în biți
-  return { hexKey, keyLengthBits }; // Returnăm cheia și lungimea în biți
+  const keyBuffer = crypto.randomBytes(32); // Se generează bufferul de 32 bytes
+  const hexKey = keyBuffer.toString("hex"); // Se conertește la format hex
+  const keyLengthBits = keyBuffer.length * 8; // Se calculează lungimea în biți
+  return { hexKey, keyLengthBits }; // Se retrunează cheia și lungimea în biți
 }
 
 // Funcție pentru măsurarea memoriei
@@ -61,7 +61,7 @@ function measureMemoryUsage() {
 
 // Metoda de criptare
 messageSchema.methods.encryptMessage = function () {
-  // Măsurăm timpul de generare a cheii
+  // Măsurare timpul de generare a cheii
   const startTimeGenerateKey = performance.now();
   const { hexKey, keyLengthBits } = generateEncryptionKey();
   const endTimeGenerateKey = performance.now();
@@ -74,27 +74,26 @@ messageSchema.methods.encryptMessage = function () {
   console.log("🔒  Advanced Encryption Standard 256 [AES-256]  🔒");
   console.log("");
   console.log("");
-  // Măsurare resurse înainte criptare
+  // Măsurare resurse înainte de criptare
   console.log("📊  Măsurare resurse înainte de criptare  🔒");
   measureMemoryUsage();
   console.log("");
-
   if (this.message) {
-    // Măsurăm lungimea mesajului original (numarul de caractere)
+    // Măsurare lungimea mesajului original (numărul de caractere)
     const originalMessageLength = this.message.length;
-    // Măsurăm dimensiunea mesajului original (numarul de bytes)
+    // Măsurare dimensiunea mesajului original (numărul de bytes)
     const originalSize = Buffer.byteLength(this.message, "utf8");
-    // Generează un nou IV pentru fiecare mesaj
+    // Se generează un nou IV pentru fiecare mesaj
     const iv = CryptoJS.lib.WordArray.random(128 / 8);
-    // Criptează mesajul folosind cheia și vectorul de inițializare
+    // Se criptează mesajul folosind cheia și vectorul de inițializare
     const encrypted = CryptoJS.AES.encrypt(
       this.message,
       CryptoJS.enc.Hex.parse(hexKey),
       { iv: iv }
     );
-    // Salvează mesajul criptat și vectorul de inițializare ca parte a mesajului criptat
+    // Se salvează mesajul criptat și vectorul de inițializare ca parte a mesajului criptat
     this.message = iv.toString(CryptoJS.enc.Hex) + ":" + encrypted.toString();
-    // Măsurăm lungimea mesajului criptat (numarul de caractere)
+    // Măsurare lungimea mesajului criptat (numărul de caractere)
     const encryptedMessageLength = this.message.length;
     this.encryptionKey = hexKey;
     console.log("🔑  Cheia de criptare: ", hexKey);

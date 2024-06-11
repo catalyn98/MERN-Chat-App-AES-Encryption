@@ -52,8 +52,8 @@ function getCPUUsage(startUsage) {
   };
 }
 
-// Utiliză pentru introducerea de pauze (delay) în execuția codului
-// Adăugată în scop didactic pentru a face măsurări
+// Utilizată pentru introducerea de pauze (delay) în execuția codului
+// Adăugată în scop didactic pentru a putea face măsurări
 async function delay(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
@@ -81,7 +81,7 @@ export const sendMessage = async (req, res) => {
     const startUsageEncrypt = startCPUUsage();
     const startEncrypt = performance.now();
     newMessage.encryptMessage();
-    await delay(100); // Introducem un mic delay pentru a permite capturarea modificărilor
+    await delay(100); // Se introduce un mic delay pentru a permite capturarea modificărilor
     const endEncrypt = performance.now();
     const endUsageEncrypt = getCPUUsage(startUsageEncrypt);
     const timeEncrypt = (endEncrypt - startEncrypt).toFixed(2);
@@ -120,7 +120,7 @@ export const sendMessage = async (req, res) => {
     const startUsageDecrypt = startCPUUsage();
     const startDecrypt = performance.now();
     newMessage.decryptMessage();
-    await delay(100); // Introducem un mic delay pentru a permite capturarea modificărilor
+    await delay(100); // Se introduce un mic delay pentru a permite capturarea modificărilor
     const endDecrypt = performance.now();
     const endUsageDecrypt = getCPUUsage(startUsageDecrypt);
     const timeDecrypt = (endDecrypt - startDecrypt).toFixed(2);
@@ -152,7 +152,6 @@ export const sendMessage = async (req, res) => {
     console.log(
       "____________________________________________________________________________________________________________________________________________________________________"
     );
-
     const receiverSocketId = getReceiverSocketId(receiverId);
     if (receiverSocketId) {
       io.to(receiverSocketId).emit("newMessage", newMessage);
