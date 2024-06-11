@@ -90,7 +90,7 @@ export const sendMessage = async (req, res) => {
     );
     console.log("🔄  Utilizare CPU în timpul criptării  🔒");
     console.log(
-      "💻  procentul de timp în care CPU a fost ocupat cu executarea codului de aplicație: ",
+      "💻  Procentul de timp în care CPU a fost ocupat cu executarea codului de aplicație: ",
       endUsageEncrypt.user,
       "%"
     );
@@ -130,7 +130,7 @@ export const sendMessage = async (req, res) => {
     console.log("");
     console.log("🔄  Utilizare CPU în timpul decriptării  🔓");
     console.log(
-      "💻  procentul de timp în care CPU a fost ocupat cu executarea codului de aplicație: ",
+      "💻  Procentul de timp în care CPU a fost ocupat cu executarea codului de aplicație: ",
       endUsageDecrypt.user,
       "%"
     );
