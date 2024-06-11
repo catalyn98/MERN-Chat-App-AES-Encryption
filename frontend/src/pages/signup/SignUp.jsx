@@ -105,7 +105,7 @@ const SignUp = () => {
           >
             Already have an account?
           </Link>
-          <div class="centerMyButton">
+          <div className="centerMyButton">
             <button className="btn btn-sm mt-2 textColor" disabled={loading}>
               {loading ? (
                 <span className="loading loading-spinner"></span>
@@ -114,6 +114,7 @@ const SignUp = () => {
               )}
             </button>
           </div>
+          <p>Chat End-to-End Encrypted. Powered by AES-256</p>
         </form>
       </div>
     </div>

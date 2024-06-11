@@ -17,6 +17,13 @@ body {
   margin-bottom: 0rem;
 }
 
+form p {
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  margin-top: 15px;
+}
+
 /* rewrite CSS rules */
 .bg-gray-400 {
   background-color: rgba(0, 0, 0, 0.65);
