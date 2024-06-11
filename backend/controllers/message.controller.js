@@ -76,7 +76,6 @@ export const sendMessage = async (req, res) => {
       receiverId,
       message,
     });
-
     // Măsurare resurse înainte de criptare
     const startUsageEncrypt = startCPUUsage();
     const startEncrypt = performance.now();
@@ -88,6 +87,7 @@ export const sendMessage = async (req, res) => {
     console.log(
       "⏱️  Timpul necesar pentru criptarea mesajului: " + timeEncrypt + " ms"
     );
+    console.log("");
     console.log("🔄  Utilizare CPU în timpul criptării  🔒");
     console.log(
       "💻  Procentul de timp în care CPU a fost ocupat cu executarea codului de aplicație: ",
@@ -110,12 +110,10 @@ export const sendMessage = async (req, res) => {
       "%"
     );
     console.log("");
-
     if (newMessage) {
       conversation.messages.push(newMessage._id);
     }
     await Promise.all([conversation.save(), newMessage.save()]);
-
     // Măsurare resurse înainte de decriptare
     const startUsageDecrypt = startCPUUsage();
     const startDecrypt = performance.now();
