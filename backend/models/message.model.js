@@ -102,7 +102,7 @@ messageSchema.methods.encryptMessage = function () {
       "📐  Dimensiunea cheii de criptare: " + keyLengthBits + " biți"
     );
     console.log(
-      "⏱️   Timpul necesar pentru generarea cheii de criptare: " +
+      "⏱️  Timpul necesar pentru generarea cheii de criptare: " +
         timeGenerateKey +
         " ms"
     );

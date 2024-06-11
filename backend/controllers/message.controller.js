@@ -86,7 +86,7 @@ export const sendMessage = async (req, res) => {
     const endUsageEncrypt = getCPUUsage(startUsageEncrypt);
     const timeEncrypt = (endEncrypt - startEncrypt).toFixed(2);
     console.log(
-      "⏱️   Timpul necesar pentru criptarea mesajului: " + timeEncrypt + " ms"
+      "⏱️  Timpul necesar pentru criptarea mesajului: " + timeEncrypt + " ms"
     );
     console.log("🔄  Utilizare CPU în timpul criptării  🔒");
     console.log(
@@ -95,7 +95,7 @@ export const sendMessage = async (req, res) => {
       "%"
     );
     console.log(
-      "🛠️   Procentul de timp în care CPU a fost ocupat cu execuția codului de kernel: ",
+      "🛠️  Procentul de timp în care CPU a fost ocupat cu execuția codului de kernel: ",
       endUsageEncrypt.sys,
       "%"
     );
@@ -125,7 +125,7 @@ export const sendMessage = async (req, res) => {
     const endUsageDecrypt = getCPUUsage(startUsageDecrypt);
     const timeDecrypt = (endDecrypt - startDecrypt).toFixed(2);
     console.log(
-      "⏱️   Timpul necesar pentru decriptarea mesajului: " + timeDecrypt + " ms"
+      "⏱️  Timpul necesar pentru decriptarea mesajului: " + timeDecrypt + " ms"
     );
     console.log("");
     console.log("🔄  Utilizare CPU în timpul decriptării  🔓");
@@ -135,7 +135,7 @@ export const sendMessage = async (req, res) => {
       "%"
     );
     console.log(
-      "🛠️   Procentul de timp în care CPU a fost ocupat cu execuția codului de kernel: ",
+      "🛠️  Procentul de timp în care CPU a fost ocupat cu execuția codului de kernel: ",
       endUsageDecrypt.sys,
       "%"
     );
